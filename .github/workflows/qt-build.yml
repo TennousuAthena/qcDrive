@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            qt_host: windows
+            qt_arch: win64_msvc2019_64
+          - os: macos-latest
+            qt_host: mac
+            qt_arch: clang_64
+          - os: ubuntu-latest
+            qt_host: linux
+            qt_arch: linux_gcc_64
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.7.0'
+          host: ${{ matrix.qt_host }}
+          target: desktop
+          arch: ${{ matrix.qt_arch }}
+          modules: 'qtpositioning qtwebchannel qtwebengine qtwebview qt5compat'
+          cache: true
+          cache-key-prefix: qtcache
+          setup-python: true
+          tools: 'tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw'
+          
+      - name: Setup MSVC Environment (Windows)
+        if: matrix.os == 'windows-latest'
+        uses: microsoft/setup-msbuild@v1.3.1
+
+      - name: Configure
+        run: |
+          qmake qcDashboard.pro
+
+      - name: Build
+        run: |
+          make -j$(nproc)
+
+      - name: Package Artifact
+        run: |
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            7z a qcDashboard-${{ matrix.os }}.zip release
+          else
+            tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard.app
+          fi
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: qcDashboard-${{ matrix.os }}
+          path: qcDashboard-${{ matrix.os }}.*
+
