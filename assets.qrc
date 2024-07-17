@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="dashboard.png">assets/dashboard.png</file>
+        <file>navigator.qml</file>
+        <file>su7.qml</file>
+    </qresource>
+    <qresource prefix="/webview">
+        <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>
+        <file alias="su7.html">assets/webview/su7_imitate/dist/index.html</file>
+    </qresource>
+    <qresource prefix="/assets">
+        <file alias="index-DTSsIWWi.js">assets/webview/su7_imitate/dist/assets/index-DTSsIWWi.js</file>
+        <file alias="index-DIuzovXx.css">assets/webview/su7_imitate/dist/assets/index-DIuzovXx.css</file>
+        <file alias="bodyPlan-D1uVCiKu.glb">assets/webview/su7_imitate/dist/assets/bodyPlan-D1uVCiKu.glb</file>
+        <file alias="merge-DkfuMUiL.gltf">assets/webview/su7_imitate/dist/assets/merge-DkfuMUiL.gltf</file>
+        <file alias="t_env_light-r6ZBsESp.hdr">assets/webview/su7_imitate/dist/assets/t_env_light-r6ZBsESp.hdr</file>
+        <file alias="wind_line-BxW1dti8.glb">assets/webview/su7_imitate/dist/assets/wind_line-BxW1dti8.glb</file>
+        <file alias="noise-B0TldAdk.png">assets/webview/su7_imitate/dist/assets/noise-B0TldAdk.png</file>
+        <file alias="t_floor_normal-Dkb3ePHO.webp">assets/webview/su7_imitate/dist/assets/t_floor_normal-Dkb3ePHO.webp</file>
+        <file alias="scene_editor-CsMK5DgW.glb">assets/webview/su7_imitate/dist/assets/scene_editor-CsMK5DgW.glb</file>
+        <file alias="t_floor_roughness-B2nbKZpC.webp">assets/webview/su7_imitate/dist/assets/t_floor_roughness-B2nbKZpC.webp</file>
+    </qresource>
+</RCC>
