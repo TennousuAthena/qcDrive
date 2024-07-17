@@ -42,7 +42,11 @@ jobs:
           cache: true
           cache-key-prefix: qtcache
           setup-python: true
-          tools: 'tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw'
+          tools: 'tools_ifw,tools_qtcreator'
+
+      - name: Setup MSVC Environment (Windows)
+        if: matrix.os == 'windows-latest'
+        uses: microsoft/setup-msbuild@v1.3.1
 
       - name: Configure
         run: |
