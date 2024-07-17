@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - 'master'
+      - "master"
   pull_request:
     branches:
-      - 'master'
+      - "master"
 
 jobs:
   build:
@@ -34,16 +34,16 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-          version: '6.7.0'
+          version: "6.7.0"
           host: ${{ matrix.qt_host }}
           target: desktop
           arch: ${{ matrix.qt_arch }}
-          modules: 'qtpositioning qtwebchannel qtwebengine qtwebview qt5compat'
+          modules: "qtpositioning qtwebchannel qtwebengine qtwebview qt5compat"
           cache: true
           cache-key-prefix: qtcache
           setup-python: true
-          tools: 'tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw'
-          
+          tools: "tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw"
+
       - name: Use MSBuild (Windows)
         if: matrix.os == 'windows-latest'
         uses: microsoft/setup-msbuild@v1.3.1
@@ -51,7 +51,7 @@ jobs:
       - name: Setup MSVC Environment (Windows)
         if: matrix.os == 'windows-latest'
         run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+          & 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat'
 
       - name: Configure
         run: |
@@ -81,4 +81,3 @@ jobs:
         with:
           name: qcDashboard-${{ matrix.os }}
           path: qcDashboard-${{ matrix.os }}.*
-
