@@ -44,9 +44,14 @@ jobs:
           setup-python: true
           tools: 'tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw'
           
-      - name: Setup MSVC Environment (Windows)
+      - name: Use MSBuild (Windows)
         if: matrix.os == 'windows-latest'
         uses: microsoft/setup-msbuild@v1.3.1
+
+      - name: Setup MSVC Environment (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
 
       - name: Configure
         run: |
@@ -56,13 +61,20 @@ jobs:
         run: |
           make -j$(nproc)
 
-      - name: Package Artifact
+      - name: Package Artifact (Windows)
+        if: matrix.os == 'windows-latest'
         run: |
-          if [ "${{ matrix.os }}" = "windows-latest" ]; then
-            7z a qcDashboard-${{ matrix.os }}.zip release
-          else
-            tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard.app
-          fi
+          7z a qcDashboard-${{ matrix.os }}.zip release
+
+      - name: Package Artifact (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard.app
+
+      - name: Package Artifact (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
