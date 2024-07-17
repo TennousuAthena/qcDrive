@@ -29,3 +29,23 @@ RESOURCES += \
     assets.qrc
 
 DISTFILES +=
+
+
+macx {
+    QMAKE_RPATHDIR += @executable_path/../Frameworks
+    QMAKE_LFLAGS_SONAME = -Wl,-install_name,@rpath/
+
+    # 复制依赖的Qt库
+    qtwebengine_framework.files = $$[QT_INSTALL_LIBS]/QtWebEngineCore.framework
+    qtwebengine_framework.path = Contents/Frameworks
+    QMAKE_BUNDLE_DATA += qtwebengine_framework
+
+    qtwebenginewidgets_framework.files = $$[QT_INSTALL_LIBS]/QtWebEngineWidgets.framework
+    qtwebenginewidgets_framework.path = Contents/Frameworks
+    QMAKE_BUNDLE_DATA += qtwebenginewidgets_framework
+
+    # 复制其他依赖库
+    dylibs.files = $$files($$PWD/path/to/lib/*.dylib)
+    dylibs.path = Contents/Frameworks
+    QMAKE_BUNDLE_DATA += dylibs
+}
