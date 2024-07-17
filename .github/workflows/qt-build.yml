@@ -49,6 +49,16 @@ jobs:
         run: |
           make -j4
 
+      - name: Deploy (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          macdeployqt qcDashboard.app -qmldir=. -verbose=1
+
+      - name: Deploy (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          linuxdeployqt qcDashboard -qmldir=. -verbose=1
+
       - name: Package Artifact (macOS)
         if: matrix.os == 'macos-latest'
         run: |
