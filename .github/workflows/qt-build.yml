@@ -44,14 +44,11 @@ jobs:
           setup-python: true
           tools: "tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw"
 
-      - name: Use MSBuild (Windows)
+      - name: Set up Visual Studio shell
         if: matrix.os == 'windows-latest'
-        uses: microsoft/setup-msbuild@v1.3.1
-
-      - name: Setup MSVC Environment (Windows)
-        if: matrix.os == 'windows-latest'
-        run: |
-          & 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat'
+        uses: egor-tensin/vs-shell@v2
+        with:
+          arch: x64
 
       - name: Configure
         run: |
