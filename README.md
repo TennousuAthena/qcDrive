@@ -11,4 +11,4 @@
 - QT6
 - AMap
 - [Pong-lei/su7_imitate](https://github.com/Pong-lei/su7_imitate)
-- [Car Assistant Dashboard](https://www.figma.com/community/file/1154325384365205487/car-assistant-dashboard?searchSessionId=lyq1t5pb-ruqwdle7ng)
+- [Car Assistant Dashboard](https://www.figma.com/community/file/1154325384365205487/car-assistant-dashboard)

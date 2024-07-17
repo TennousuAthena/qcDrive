@@ -65,7 +65,7 @@ jobs:
       - name: Deploy (Linux)
         if: matrix.os == 'ubuntu-latest'
         run: |
-          linuxdeployqt qcDashboard -qmldir=. -verbose=1
+          /usr/local/linuxdeployqt/AppRun qcDashboard -qmldir=. -verbose=1
 
       - name: Package Artifact (macOS)
         if: matrix.os == 'macos-latest'
