@@ -16,11 +16,14 @@ jobs:
         os: [windows-latest, macos-latest, ubuntu-latest]
         qt_version: ['6.7.0']
         qt_arch: [win64_msvc2019_64, clang_64, gcc_64]
+        include:
+          - os: windows-latest
+            qt_host: windows
+          - os: macos-latest
+            qt_host: mac
+          - os: ubuntu-latest
+            qt_host: linux
         exclude:
-          - os: windows-latest
-            qt_arch: clang_64
-          - os: windows-latest
-            qt_arch: gcc_64
           - os: macos-latest
             qt_arch: win64_msvc2019_64
           - os: macos-latest
@@ -40,7 +43,7 @@ jobs:
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{ matrix.qt_version }}
-          host: ${{ matrix.os }}
+          host: ${{ matrix.qt_host }}
           target: desktop
           arch: ${{ matrix.qt_arch }}
           modules: qtwebengine
