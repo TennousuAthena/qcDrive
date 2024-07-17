@@ -13,25 +13,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
-        qt_version: ['6.7.0']
-        qt_arch: [win64_msvc2019_64, clang_64, gcc_64]
         include:
           - os: windows-latest
             qt_host: windows
+            qt_arch: win64_msvc2019_64
           - os: macos-latest
             qt_host: mac
+            qt_arch: clang_64
           - os: ubuntu-latest
             qt_host: linux
-        exclude:
-          - os: macos-latest
-            qt_arch: win64_msvc2019_64
-          - os: macos-latest
             qt_arch: gcc_64
-          - os: ubuntu-latest
-            qt_arch: win64_msvc2019_64
-          - os: ubuntu-latest
-            qt_arch: clang_64
+      fail-fast: false
 
     steps:
       - name: Checkout
@@ -42,11 +34,15 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-          version: ${{ matrix.qt_version }}
+          version: '6.7.0'
           host: ${{ matrix.qt_host }}
           target: desktop
           arch: ${{ matrix.qt_arch }}
           modules: qtwebengine
+          cache: true
+          cache-key-prefix: qtcache
+          setup-python: true
+          tools: 'tools_ifw,tools_qtcreator'
 
       - name: Configure
         run: |
