@@ -38,7 +38,7 @@ jobs:
           host: ${{ matrix.qt_host }}
           target: desktop
           arch: ${{ matrix.qt_arch }}
-          modules: qtwebengine
+          modules: 'qtpositioning qtwebchannel qtwebengine qtwebview qt5compat'
           cache: true
           cache-key-prefix: qtcache
           setup-python: true
