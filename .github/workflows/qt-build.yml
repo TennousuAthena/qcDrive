@@ -17,7 +17,7 @@ jobs:
           - os: macos-latest
             qt_host: mac
             qt_arch: clang_64
-          - os: ubuntu-latest
+          - os: ubuntu-20.04
             qt_host: linux
             qt_arch: linux_gcc_64
       fail-fast: false
@@ -55,7 +55,7 @@ jobs:
           macdeployqt qcDashboard.app -qmldir=. -verbose=1
 
       - name: Extract linuxdeployqt
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-20.04'
         run: |
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
           chmod a+x linuxdeployqt-continuous-x86_64.AppImage
@@ -63,7 +63,7 @@ jobs:
           sudo mv squashfs-root /usr/local/linuxdeployqt
 
       - name: Deploy (Linux)
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-20.04'
         run: |
           /usr/local/linuxdeployqt/AppRun qcDashboard -qmldir=. -verbose=1
 
@@ -73,7 +73,7 @@ jobs:
           tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard.app
 
       - name: Package Artifact (Linux)
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-20.04'
         run: |
           tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard
 
