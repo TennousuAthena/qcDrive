@@ -19,7 +19,7 @@ defaults:
 env:
   SOURCE_DIR: ${{ github.workspace }}
   QT_VERSION: 6.7.0
-  ARTIFACT: qt-build.zip
+  ARTIFACT: qt-qcDashboard-build.zip
 
 jobs:
   build:
