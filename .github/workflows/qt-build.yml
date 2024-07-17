@@ -1,4 +1,4 @@
-name: CI
+name: "*nix Build"
 
 on:
   push:
@@ -14,9 +14,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: windows-latest
-            qt_host: windows
-            qt_arch: win64_msvc2019_64
           - os: macos-latest
             qt_host: mac
             qt_arch: clang_64
@@ -44,12 +41,6 @@ jobs:
           setup-python: true
           tools: "tools_qtcreator,qt.tools.qtcreator tools_qtcreator_gui,qt.tools.qtcreator_gui tools_ifw"
 
-      - name: Set up Visual Studio shell
-        if: matrix.os == 'windows-latest'
-        uses: egor-tensin/vs-shell@v2
-        with:
-          arch: x64
-
       - name: Configure
         run: |
           qmake qcDashboard.pro
@@ -57,11 +48,6 @@ jobs:
       - name: Build
         run: |
           make -j4
-
-      - name: Package Artifact (Windows)
-        if: matrix.os == 'windows-latest'
-        run: |
-          7z a qcDashboard-${{ matrix.os }}.zip release
 
       - name: Package Artifact (macOS)
         if: matrix.os == 'macos-latest'
