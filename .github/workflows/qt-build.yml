@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        qt_version: ['6.7.0']
+        qt_arch: [win64_msvc2019_64, clang_64, gcc_64]
+        exclude:
+          - os: windows-latest
+            qt_arch: clang_64
+          - os: windows-latest
+            qt_arch: gcc_64
+          - os: macos-latest
+            qt_arch: win64_msvc2019_64
+          - os: macos-latest
+            qt_arch: gcc_64
+          - os: ubuntu-latest
+            qt_arch: win64_msvc2019_64
+          - os: ubuntu-latest
+            qt_arch: clang_64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ matrix.qt_version }}
+          host: ${{ matrix.os }}
+          target: desktop
+          arch: ${{ matrix.qt_arch }}
+          modules: qtwebengine
+
+      - name: Configure
+        run: |
+          qmake qcDashboard.pro
+
+      - name: Build
+        run: |
+          make -j$(nproc)
+
+      - name: Package Artifact
+        run: |
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            7z a qcDashboard-${{ matrix.os }}.zip release
+          else
+            tar czf qcDashboard-${{ matrix.os }}.tar.gz qcDashboard.app
+          fi
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: qcDashboard-${{ matrix.os }}
+          path: qcDashboard-${{ matrix.os }}.*
+
