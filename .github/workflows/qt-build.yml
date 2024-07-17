@@ -54,12 +54,13 @@ jobs:
         run: |
           macdeployqt qcDashboard.app -qmldir=. -verbose=1
 
-      - name: Install linuxdeployqt
+      - name: Extract linuxdeployqt
         if: matrix.os == 'ubuntu-latest'
         run: |
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
           chmod a+x linuxdeployqt-continuous-x86_64.AppImage
-          sudo mv linuxdeployqt-continuous-x86_64.AppImage /usr/local/bin/linuxdeployqt
+          ./linuxdeployqt-continuous-x86_64.AppImage --appimage-extract
+          sudo mv squashfs-root /usr/local/linuxdeployqt
 
       - name: Deploy (Linux)
         if: matrix.os == 'ubuntu-latest'
