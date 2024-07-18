@@ -69,7 +69,7 @@ jobs:
       - name: Deploy (Linux)
         if: matrix.os == 'ubuntu-20.04'
         run: |
-          /usr/local/linuxdeployqt/AppRun qcDashboard -qmldir=${{ env.SOURCE_DIR }} -verbose=1 -plugin=qt5compat
+          /usr/local/linuxdeployqt/AppRun qcDashboard -qmldir=${{ env.SOURCE_DIR }} -verbose=1
 
       - name: Package Artifact (macOS)
         if: matrix.os == 'macos-latest'
