@@ -64,6 +64,7 @@
    </property>
    <widget class="IndexWidget" name="index_widget"/>
    <widget class="Mp3Window" name="mp3_widget"/>
+   <widget class="MainWindow" name="browser_widget"/>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -167,8 +168,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1131</width>
-     <height>681</height>
+     <width>1080</width>
+     <height>720</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -200,6 +201,12 @@
    <class>Mp3Window</class>
    <extends>QWidget</extends>
    <header>subprojects/mp3/mp3.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MainWindow</class>
+   <extends>QWidget</extends>
+   <header>subprojects/myQWebEngine/mainwindow.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
