@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file alias="dashboard.png">assets/dashboard.png</file>
+        <file alias="page_index.png">assets/page_index.png</file>
         <file>navigator.qml</file>
         <file>su7.qml</file>
     </qresource>

@@ -1,14 +1,14 @@
-#include "widget.h"
+#include "dashboard.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Widget w;
+    Dashboard app;
 
 
-    w.show();
+    app.show();
 
     return a.exec();
 }
