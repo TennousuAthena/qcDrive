@@ -20,4 +20,10 @@
         <file alias="scene_editor-CsMK5DgW.glb">assets/webview/su7_imitate/dist/assets/scene_editor-CsMK5DgW.glb</file>
         <file alias="t_floor_roughness-B2nbKZpC.webp">assets/webview/su7_imitate/dist/assets/t_floor_roughness-B2nbKZpC.webp</file>
     </qresource>
+    <qresource prefix="/webview/draco/gltf">
+        <file alias="draco_decoder.js">assets/webview/su7_imitate/dist/draco/gltf/draco_decoder.js</file>
+        <file alias="draco_decoder.wasm">assets/webview/su7_imitate/dist/draco/gltf/draco_decoder.wasm</file>
+        <file alias="draco_encoder.js">assets/webview/su7_imitate/dist/draco/gltf/draco_encoder.js</file>
+        <file alias="draco_wasm_wrapper.js">assets/webview/su7_imitate/dist/draco/gltf/draco_wasm_wrapper.js</file>
+    </qresource>
 </RCC>

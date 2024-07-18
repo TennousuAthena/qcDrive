@@ -8,6 +8,10 @@ on:
     branches:
       - "master"
 
+env:
+  SOURCE_DIR: ${{ github.workspace }}
+  QT_VERSION: 6.7.0
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -31,7 +35,7 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-          version: "6.7.0"
+          version: ${{ env.QT_VERSION }}
           host: ${{ matrix.qt_host }}
           target: desktop
           arch: ${{ matrix.qt_arch }}
@@ -65,7 +69,7 @@ jobs:
       - name: Deploy (Linux)
         if: matrix.os == 'ubuntu-20.04'
         run: |
-          /usr/local/linuxdeployqt/AppRun qcDashboard -qmldir=. -verbose=1
+          /usr/local/linuxdeployqt/AppRun qcDashboard -qmldir=${{ env.SOURCE_DIR }} -verbose=1 -plugin=qt5compat
 
       - name: Package Artifact (macOS)
         if: matrix.os == 'macos-latest'
