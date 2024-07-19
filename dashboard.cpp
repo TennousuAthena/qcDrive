@@ -43,6 +43,7 @@ void Dashboard::showMaps()
 void Dashboard::showMedia()
 {
     ui->stackedWidget->setCurrentIndex(4);
+}
 void Dashboard::showCenter()
 {
     ui->stackedWidget->setCurrentIndex(5);
