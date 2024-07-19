@@ -94,6 +94,20 @@
       <item>
        <layout class="QHBoxLayout" name="buttonLayout">
         <item>
+         <widget class="QPushButton" name="fileButton">
+          <property name="icon">
+           <iconset resource="pic.qrc">
+            <normaloff>:/new/prefix1/file.png</normaloff>:/new/prefix1/file.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>48</width>
+            <height>48</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="prevButton">
           <property name="icon">
            <iconset resource="pic.qrc">

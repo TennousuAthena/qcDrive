@@ -184,10 +184,10 @@
   <widget class="miniWeather" name="mini_weather" native="true">
    <property name="geometry">
     <rect>
-     <x>820</x>
+     <x>819</x>
      <y>30</y>
-     <width>120</width>
-     <height>80</height>
+     <width>121</width>
+     <height>51</height>
     </rect>
    </property>
   </widget>
