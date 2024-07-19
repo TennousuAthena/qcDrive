@@ -67,7 +67,7 @@
    <widget class="MainWindow" name="browser_widget"/>
    <widget class="MapB" name="maps_widget"/>
    <widget class="Media" name="media_widget"/>
-   <widget class="carCenter" name="center_widget"/>
+   <widget class="carControl" name="carControl_widget"/>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -155,7 +155,16 @@
        <string notr="true">background-color: rgba(255, 255, 255, 0); color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -270,6 +279,12 @@
    <class>miniWeather</class>
    <extends>QWidget</extends>
    <header>miniWeather.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>carControl</class>
+   <extends>QWidget</extends>
+   <header>subprojects/carControl/carControl.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>

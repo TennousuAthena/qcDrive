@@ -11,7 +11,7 @@ Dashboard::Dashboard(QWidget *parent)
     connect(ui->btn2, &QPushButton::clicked, this, &Dashboard::showMaps);
     connect(ui->btn3, &QPushButton::clicked, this, &Dashboard::showBrowser);
     connect(ui->btn4, &QPushButton::clicked, this, &Dashboard::showMedia);
-    connect(ui->btn5, &QPushButton::clicked, this, &Dashboard::showCenter);
+    connect(ui->btn5, &QPushButton::clicked, this, &Dashboard::showControl);
     connect(ui->btn_search, &QPushButton::clicked, this, &Dashboard::showMaps);
 }
 
@@ -52,7 +52,7 @@ void Dashboard::showMedia()
     QPixmap pixmap(":/dashboard-video.svg");
     ui->bg->setPixmap(pixmap);
 }
-void Dashboard::showCenter()
+void Dashboard::showControl()
 {
     ui->stackedWidget->setCurrentIndex(5);
 }

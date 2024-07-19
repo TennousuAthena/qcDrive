@@ -16,7 +16,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
-    mainwindow.ui
+    carControl.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

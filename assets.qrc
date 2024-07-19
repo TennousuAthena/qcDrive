@@ -9,6 +9,15 @@
         <file alias="weather.png">assets/weather_preview.png</file>
         <file>navigator.qml</file>
         <file>su7.qml</file>
+        <file>assets/off.jpg</file>
+        <file>assets/on.jpg</file>
+        <file>assets/aircondition.png</file>
+        <file>assets/center.png</file>
+        <file>assets/door.png</file>
+        <file>assets/light.png</file>
+        <file>assets/lock.png</file>
+        <file>assets/seatAdjustment.png</file>
+        <file>assets/skylight.png</file>
     </qresource>
     <qresource prefix="/webview">
         <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>
