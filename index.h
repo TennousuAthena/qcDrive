@@ -30,6 +30,8 @@ private:
 
 private slots:
     void showMp3Window();
+    void sendSOS();  // 声明sendSOS槽函数
+    void showSOSMessage();  // 新增槽函数声明
 };
 
 #endif // INDEX_H
