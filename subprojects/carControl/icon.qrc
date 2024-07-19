@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/center.png</file>
+        <file>icon/aircondition.png</file>
+        <file>icon/door.png</file>
+        <file>icon/light.png</file>
+        <file>icon/lock.png</file>
+        <file>icon/seatAdjustment.png</file>
+        <file>icon/skylight.png</file>
+    </qresource>
+</RCC>
