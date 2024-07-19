@@ -67,6 +67,7 @@
    <widget class="MainWindow" name="browser_widget"/>
    <widget class="MapB" name="maps_widget"/>
    <widget class="Media" name="media_widget"/>
+   <widget class="carCenter" name="center_widget"/>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -257,6 +258,16 @@
    <header>subprojects/qtMedia/media.h</header>
    <container>1</container>
   </customwidget>
+   <class>carCenter</class>
+   <extends>QWidget</extends>
+   <header>subprojects/carCenter/carCenter.h</header>
+   <container>1</container>
+  </customwidget>  <customwidget>
+  <class>carControl</class>
+  <extends>QWidget</extends>
+  <header>subprojects/carControl/carControl.h</header>
+  <container>1</container>
+ </customwidget>
  </customwidgets>
  <resources>
   <include location="assets.qrc"/>

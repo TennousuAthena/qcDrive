@@ -11,6 +11,7 @@ Dashboard::Dashboard(QWidget *parent)
     connect(ui->btn2, &QPushButton::clicked, this, &Dashboard::showMaps);
     connect(ui->btn3, &QPushButton::clicked, this, &Dashboard::showBrowser);
     connect(ui->btn4, &QPushButton::clicked, this, &Dashboard::showMedia);
+    connect(ui->btn5, &QPushButton::clicked, this, &Dashboard::showCenter);
     connect(ui->btn_search, &QPushButton::clicked, this, &Dashboard::showMaps);
 }
 
@@ -42,4 +43,7 @@ void Dashboard::showMaps()
 void Dashboard::showMedia()
 {
     ui->stackedWidget->setCurrentIndex(4);
+void Dashboard::showCenter()
+{
+    ui->stackedWidget->setCurrentIndex(5);
 }

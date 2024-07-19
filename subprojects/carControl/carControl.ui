@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>carControl</class>
+ <widget class="QMainWindow" name="carControl">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>carControl</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -47,10 +47,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	border: none; 
-	background: transparent;
-	
-	image: url(:/icon/door.png);
+    border: none;
+    background: transparent;
+    image: url(:/icon/door.png);
 }</string>
           </property>
           <property name="text">
@@ -68,10 +67,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	border: none; 
-	background: transparent;
-	
-	image: url(:/icon/light.png);
+    border: none;
+    background: transparent;
+    image: url(:/icon/light.png);
 }</string>
           </property>
           <property name="text">
@@ -89,10 +87,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	border: none; 
-	background: transparent;
-	
-	image: url(:/icon/lock.png);
+    border: none;
+    background: transparent;
+    image: url(:/icon/lock.png);
 }</string>
           </property>
           <property name="text">
@@ -130,9 +127,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	border: none; 
-	background: transparent;
-	image: url(:/icon/aircondition.png);
+    border: none;
+    background: transparent;
+    image: url(:/icon/aircondition.png);
 }</string>
           </property>
           <property name="text">
@@ -150,9 +147,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	border: none; 
-	background: transparent;
-	image: url(:/icon/skylight.png);
+    border: none;
+    background: transparent;
+    image: url(:/icon/skylight.png);
 }</string>
           </property>
           <property name="text">
@@ -170,9 +167,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	border: none; 
-	background: transparent;
-	image: url(:/icon/seatAdjustment.png);
+    border: none;
+    background: transparent;
+    image: url(:/icon/seatAdjustment.png);
 }</string>
           </property>
           <property name="text">

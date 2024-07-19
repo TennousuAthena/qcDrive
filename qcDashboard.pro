@@ -19,7 +19,10 @@ SOURCES += \
     subprojects/myQWebEngine/mainwindow.cpp \
     subprojects/myQWebEngine/webview.cpp \
     subprojects/mp3/mp3.cpp \
-    subprojects/qtMedia/media.cpp
+    subprojects/qtMedia/media.cpp \
+    subprojects/mp3/mp3.cpp\
+    subprojects/carControl/carControl.cpp\
+    subprojects/carCenter/carCenter.cpp\
 
 HEADERS += \
     dashboard.h \
@@ -29,7 +32,10 @@ HEADERS += \
     subprojects/myQWebEngine/mainwindow.h \
     subprojects/myQWebEngine/webview.h \
     subprojects/mp3/mp3.h \
-    subprojects/qtMedia/media.h
+    subprojects/qtMedia/media.h \
+    subprojects/mp3/mp3.h\
+    subprojects/carControl/carControl.h\
+    subprojects/carCenter/carCenter.h\
 
 FORMS += \
     dashboard.ui \
@@ -38,12 +44,13 @@ FORMS += \
     subprojects/MapB/mapb.ui \
     subprojects/myQWebEngine/mainwindow.ui \
     subprojects/mp3/mp3.ui \
-    subprojects/qtMedia/media.ui
-
+    subprojects/qtMedia/media.ui \
+    subprojects/carControl/carControl.ui\
+    subprojects/carCenter/carCenter.ui\
 # Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+# qnx: target.path = /tmp/$${TARGET}/bin
+# else: unix:!android: target.path = /opt/$${TARGET}/bin
+# !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
     assets.qrc

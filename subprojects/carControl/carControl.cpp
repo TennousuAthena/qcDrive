@@ -1,21 +1,21 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "carcontrol.h"
+#include "ui_carcontrol.h"
 
-MainWindow::MainWindow(QWidget *parent)
+carControl::carControl(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::carControl)
 {
     ui->setupUi(this);
     initSocket();
     initButton();
 }
 
-MainWindow::~MainWindow()
+carControl::~carControl()
 {
     delete ui;
 }
 
-void MainWindow::initSocket()
+void carControl::initSocket()
 {
     socket = new QTcpSocket;
     bool ok = socket->bind(QHostAddress("127.0.0.1"),8000);
@@ -25,12 +25,12 @@ void MainWindow::initSocket()
     }
     socket->connectToHost("localhost",9000);
     if (!socket->waitForConnected(3000)) {
-            qDebug() << "连接失败！";
-            return;
+        qDebug() << "连接失败！";
+        return;
     }
 }
 
-void MainWindow::initButton()
+void carControl::initButton()
 {
     ui->pushButton_Door->setAccessibleName("open");
     ui->pushButton_Light->setAccessibleName("open");
@@ -40,8 +40,7 @@ void MainWindow::initButton()
     ui->pushButton_skylight->setAccessibleName("open");
 }
 
-
-void MainWindow::on_pushButton_Door_clicked()
+void carControl::on_pushButton_Door_clicked()
 {
     if(ui->pushButton_Door->accessibleName() == "open")
     {
@@ -53,13 +52,10 @@ void MainWindow::on_pushButton_Door_clicked()
         QString message = "1 0 车门已关闭！";
         socket->write(message.toLocal8Bit());
         ui->pushButton_Door->setAccessibleName("open");
-
     }
-
 }
 
-
-void MainWindow::on_pushButton_Light_clicked()
+void carControl::on_pushButton_Light_clicked()
 {
     if(ui->pushButton_Light->accessibleName() == "open")
     {
@@ -74,8 +70,7 @@ void MainWindow::on_pushButton_Light_clicked()
     }
 }
 
-
-void MainWindow::on_pushButton_lock_clicked()
+void carControl::on_pushButton_lock_clicked()
 {
     if(ui->pushButton_lock->accessibleName() == "open")
     {
@@ -90,8 +85,7 @@ void MainWindow::on_pushButton_lock_clicked()
     }
 }
 
-
-void MainWindow::on_pushButton_airCondition_clicked()
+void carControl::on_pushButton_airCondition_clicked()
 {
     if(ui->pushButton_airCondition->accessibleName() == "open")
     {
@@ -106,8 +100,7 @@ void MainWindow::on_pushButton_airCondition_clicked()
     }
 }
 
-
-void MainWindow::on_pushButton_skylight_clicked()
+void carControl::on_pushButton_skylight_clicked()
 {
     if(ui->pushButton_skylight->accessibleName() == "open")
     {
@@ -122,8 +115,7 @@ void MainWindow::on_pushButton_skylight_clicked()
     }
 }
 
-
-void MainWindow::on_pushButton_seatAdjustment_clicked()
+void carControl::on_pushButton_seatAdjustment_clicked()
 {
     if(ui->pushButton_seatAdjustment->accessibleName() == "open")
     {
@@ -137,4 +129,3 @@ void MainWindow::on_pushButton_seatAdjustment_clicked()
         ui->pushButton_seatAdjustment->setAccessibleName("open");
     }
 }
-
