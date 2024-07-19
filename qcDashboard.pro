@@ -1,4 +1,4 @@
-QT       += core gui webenginewidgets quickwidgets network multimedia
+QT       += core gui webenginewidgets quickwidgets network multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,7 +18,8 @@ SOURCES += \
     subprojects/MapB/mapb.cpp \
     subprojects/myQWebEngine/mainwindow.cpp \
     subprojects/myQWebEngine/webview.cpp \
-    subprojects/mp3/mp3.cpp
+    subprojects/mp3/mp3.cpp \
+    subprojects/qtMedia/media.cpp
 
 HEADERS += \
     dashboard.h \
@@ -27,7 +28,8 @@ HEADERS += \
     subprojects/MapB/mapb.h \
     subprojects/myQWebEngine/mainwindow.h \
     subprojects/myQWebEngine/webview.h \
-    subprojects/mp3/mp3.h
+    subprojects/mp3/mp3.h \
+    subprojects/qtMedia/media.h
 
 FORMS += \
     dashboard.ui \
@@ -36,6 +38,7 @@ FORMS += \
     subprojects/MapB/mapb.ui \
     subprojects/myQWebEngine/mainwindow.ui \
     subprojects/mp3/mp3.ui \
+    subprojects/qtMedia/media.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

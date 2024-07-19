@@ -66,6 +66,7 @@
    <widget class="Mp3Window" name="mp3_widget"/>
    <widget class="MainWindow" name="browser_widget"/>
    <widget class="MapB" name="maps_widget"/>
+   <widget class="Media" name="media_widget"/>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -248,6 +249,12 @@
    <class>miniWeather</class>
    <extends>QWidget</extends>
    <header>miniWeather.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Media</class>
+   <extends>QWidget</extends>
+   <header>subprojects/qtMedia/media.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
