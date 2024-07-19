@@ -227,7 +227,7 @@ void MainWindow::loadMainPage()
     bool isOPen = false;
 
     if(!isOPen){
-        myView->load(QUrl("https://cn.bing.com/"));//加载网页
+        myView->load(QUrl("https://limestart.cn/"));//加载网页
         myView->setFocus();//获取焦点
     }
     else{

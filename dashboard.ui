@@ -180,10 +180,21 @@
     <string/>
    </property>
   </widget>
+  <widget class="miniWeather" name="mini_weather" native="true">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>30</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+  </widget>
   <zorder>bgc</zorder>
   <zorder>bg</zorder>
   <zorder>verticalLayoutWidget</zorder>
   <zorder>stackedWidget</zorder>
+  <zorder>mini_weather</zorder>
  </widget>
  <customwidgets>
   <customwidget>
@@ -214,6 +225,12 @@
    <class>MapB</class>
    <extends>QWidget</extends>
    <header>subprojects/MapB/mapb.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>miniWeather</class>
+   <extends>QWidget</extends>
+   <header>miniWeather.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

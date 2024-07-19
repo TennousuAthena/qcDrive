@@ -14,6 +14,7 @@ SOURCES += \
     dashboard.cpp \
     index.cpp \
     main.cpp \
+    miniweather.cpp \
     subprojects/MapB/mapb.cpp \
     subprojects/myQWebEngine/mainwindow.cpp \
     subprojects/myQWebEngine/webview.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 HEADERS += \
     dashboard.h \
     index.h \
+    miniweather.h \
     subprojects/MapB/mapb.h \
     subprojects/myQWebEngine/mainwindow.h \
     subprojects/myQWebEngine/webview.h \
@@ -30,6 +32,7 @@ HEADERS += \
 FORMS += \
     dashboard.ui \
     index.ui \
+    miniweather.ui \
     subprojects/MapB/mapb.ui \
     subprojects/myQWebEngine/mainwindow.ui \
     subprojects/mp3/mp3.ui \
