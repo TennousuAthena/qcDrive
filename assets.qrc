@@ -8,6 +8,7 @@
     <qresource prefix="/webview">
         <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>
         <file alias="su7.html">assets/webview/su7_imitate/dist/index.html</file>
+        <file alias="AMap.html">subprojects/MapB/AMap.html</file>
     </qresource>
     <qresource prefix="/assets">
         <file alias="index-DTSsIWWi.js">assets/webview/su7_imitate/dist/assets/index-DTSsIWWi.js</file>

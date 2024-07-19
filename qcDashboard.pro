@@ -14,6 +14,7 @@ SOURCES += \
     dashboard.cpp \
     index.cpp \
     main.cpp \
+    subprojects/MapB/mapb.cpp \
     subprojects/myQWebEngine/mainwindow.cpp \
     subprojects/myQWebEngine/webview.cpp \
     subprojects/mp3/mp3.cpp
@@ -21,6 +22,7 @@ SOURCES += \
 HEADERS += \
     dashboard.h \
     index.h \
+    subprojects/MapB/mapb.h \
     subprojects/myQWebEngine/mainwindow.h \
     subprojects/myQWebEngine/webview.h \
     subprojects/mp3/mp3.h
@@ -28,8 +30,9 @@ HEADERS += \
 FORMS += \
     dashboard.ui \
     index.ui \
+    subprojects/MapB/mapb.ui \
     subprojects/myQWebEngine/mainwindow.ui \
-    subprojects/mp3/mp3.ui
+    subprojects/mp3/mp3.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -38,5 +41,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     assets.qrc
+
 
 DISTFILES +=

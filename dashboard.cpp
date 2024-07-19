@@ -8,7 +8,7 @@ Dashboard::Dashboard(QWidget *parent)
     ui->setupUi(this);
 
     connect(ui->btn1, &QPushButton::clicked, this, &Dashboard::showIndexWidget);
-    connect(ui->btn2, &QPushButton::clicked, this, &Dashboard::showMp3Window);
+    connect(ui->btn2, &QPushButton::clicked, this, &Dashboard::showMaps);
     connect(ui->btn3, &QPushButton::clicked, this, &Dashboard::showBrowser);
 }
 
@@ -30,4 +30,9 @@ void Dashboard::showMp3Window()
 void Dashboard::showBrowser()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void Dashboard::showMaps()
+{
+    ui->stackedWidget->setCurrentIndex(3);
 }

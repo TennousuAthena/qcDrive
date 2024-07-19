@@ -179,8 +179,8 @@ void MainWindow::Init()
     connect(myView,&QWebEngineView::titleChanged,this,&MainWindow::doProcessChangeTitle);//修改title
     // 3.添加进度条，接受loadProgress信号，显示当前进度，任务结束后，接受loadFinish信号，隐藏进度条 */
     myProgressBar = new QProgressBar(ui->statusbar);//将进度条放在状态栏中
-    myProgressBar->setStyleSheet("QProgressBar{background-color:#05B8CC;width:20px;"
-                                 "border:2px solid grey;border-radius:5px;text-align:center;}");
+    // myProgressBar->setStyleSheet("QProgressBar{background-color:#05B8CC;width:20px;"
+                                 // "border:2px solid grey;border-radius:5px;text-align:center;}");
     connect(myView,&QWebEngineView::loadProgress,this,&MainWindow::doProcessSetMyProgressBar);//获取中
 //    connect(QWebEngineView,SIGNAL(loadProgress)) 注意此写法再次不支持，可能是QWebEngineView是qt5.5后出来的模块
     connect(myView,&QWebEngineView::loadFinished,this,&MainWindow::doProcessHideMyProgressBar);//获取完成
@@ -227,8 +227,8 @@ void MainWindow::loadMainPage()
     bool isOPen = false;
 
     if(!isOPen){
-
-
+        myView->load(QUrl("https://cn.bing.com/"));//加载网页
+        myView->setFocus();//获取焦点
     }
     else{
         QTextStream in(myFile);

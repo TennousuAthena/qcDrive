@@ -19,6 +19,7 @@ private slots:
     void showIndexWidget();
     void showMp3Window();
     void showBrowser();
+    void showMaps();
 
 private:
     Ui::Dashboard *ui;

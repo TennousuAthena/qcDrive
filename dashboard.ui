@@ -65,6 +65,7 @@
    <widget class="IndexWidget" name="index_widget"/>
    <widget class="Mp3Window" name="mp3_widget"/>
    <widget class="MainWindow" name="browser_widget"/>
+   <widget class="MapB" name="maps_widget"/>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -207,6 +208,12 @@
    <class>MainWindow</class>
    <extends>QWidget</extends>
    <header>subprojects/myQWebEngine/mainwindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MapB</class>
+   <extends>QWidget</extends>
+   <header>subprojects/MapB/mapb.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
