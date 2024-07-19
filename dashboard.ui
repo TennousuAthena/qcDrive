@@ -68,6 +68,7 @@
    <widget class="MapB" name="maps_widget"/>
    <widget class="Media" name="media_widget"/>
    <widget class="carControl" name="carControl_widget"/>
+   <widget class="WeatherPage" name="Weather_Page"/>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -236,6 +237,22 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_miniweather">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>20</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0); color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
   <zorder>bgc</zorder>
   <zorder>bg</zorder>
   <zorder>verticalLayoutWidget</zorder>
@@ -243,6 +260,7 @@
   <zorder>mini_weather</zorder>
   <zorder>btn_search</zorder>
   <zorder>guan</zorder>
+  <zorder>btn_miniweather</zorder>
  </widget>
  <customwidgets>
   <customwidget>
@@ -294,9 +312,9 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>carCenter</class>
+   <class>WeatherPage</class>
    <extends>QWidget</extends>
-   <header>subprojects/carCenter/carCenter.h</header>
+   <header>weatherpage.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

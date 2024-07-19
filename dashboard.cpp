@@ -13,6 +13,9 @@ Dashboard::Dashboard(QWidget *parent)
     connect(ui->btn4, &QPushButton::clicked, this, &Dashboard::showMedia);
     connect(ui->btn5, &QPushButton::clicked, this, &Dashboard::showControl);
     connect(ui->btn_search, &QPushButton::clicked, this, &Dashboard::showMaps);
+
+    connect(ui->btn_miniweather, &QPushButton::clicked, this, &Dashboard::showWeather);
+
 }
 
 Dashboard::~Dashboard()
@@ -65,4 +68,9 @@ void Dashboard::showMedia()
 void Dashboard::showControl()
 {
     ui->stackedWidget->setCurrentIndex(5);
+}
+
+void Dashboard::showWeather()
+{
+    ui->stackedWidget->setCurrentIndex(6);
 }

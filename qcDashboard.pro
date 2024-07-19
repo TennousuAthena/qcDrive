@@ -23,6 +23,7 @@ SOURCES += \
     subprojects/qtMedia/media.cpp \
     subprojects/carControl/carControl.cpp\
     subprojects/carCenter/carCenter.cpp\
+    weatherpage.cpp
 
 HEADERS += \
     dashboard.h \
@@ -36,6 +37,7 @@ HEADERS += \
     subprojects/qtMedia/media.h \
     subprojects/carControl/carControl.h\
     subprojects/carCenter/carCenter.h\
+    weatherpage.h
 
 FORMS += \
     dashboard.ui \
@@ -51,7 +53,8 @@ FORMS += \
 # Default rules for deployment.
 # qnx: target.path = /tmp/$${TARGET}/bin
 # else: unix:!android: target.path = /opt/$${TARGET}/bin
-# !isEmpty(target.path): INSTALLS += target
+ \# !isEmpty(target.path): INSTALLS += target
+    weatherpage.ui
 
 RESOURCES += \
     assets.qrc

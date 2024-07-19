@@ -28,6 +28,7 @@ private slots:
     void showMaps();
     void showMedia();
     void showControl();
+    void showWeather();
 
 private:
     Ui::Dashboard *ui;

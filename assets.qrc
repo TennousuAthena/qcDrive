@@ -43,6 +43,12 @@
         <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>
         <file alias="su7.html">assets/webview/su7_imitate/dist/index.html</file>
         <file alias="AMap.html">subprojects/MapB/AMap.html</file>
+        <file alias="weather.html">assets/webview/the-weather-forecasting/build/index.html</file>
+    </qresource>
+
+    <qresource prefix="/static">
+        <file alias="js/main.fee2ede0.js">assets/webview/the-weather-forecasting/build/static/js/main.fee2ede0.js</file>
+        <file alias="css/main.16db1b01.css">assets/webview/the-weather-forecasting/build/static/css/main.16db1b01.css</file>
     </qresource>
     <qresource prefix="/assets">
         <file alias="avatar.png">assets/guan.png</file>
