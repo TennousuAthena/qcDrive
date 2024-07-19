@@ -99,7 +99,7 @@ background-color: rgba(255, 255, 255, 0);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="emergency">
+  <widget class="QPushButton" name="buttonSOS">
    <property name="geometry">
     <rect>
      <x>890</x>
@@ -108,8 +108,17 @@ background-color: rgba(255, 255, 255, 0);</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: red; color: white; font-size: 18px; border-radius: 15px;</string>
+   </property>
    <property name="text">
-    <string>wooow</string>
+    <string>SOS</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
    </property>
   </widget>
  </widget>

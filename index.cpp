@@ -4,6 +4,10 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QWebEngineUrlScheme>
+#include <QMessageBox>
+#include <QDialog>
+#include <QLabel>
+#include <QVBoxLayout>
 #include "dashboard.h"
 
 IndexWidget::IndexWidget(QWidget *parent)
@@ -28,6 +32,9 @@ IndexWidget::IndexWidget(QWidget *parent)
         );
     QWebEngineUrlScheme::registerScheme(scheme);
     initWebViews();  // 初始化webviews
+
+    // 连接SOS按钮的点击信号到sendSOS槽函数
+    connect(ui->buttonSOS, &QPushButton::clicked, this, &IndexWidget::sendSOS);
 }
 
 IndexWidget::~IndexWidget()
@@ -37,7 +44,7 @@ IndexWidget::~IndexWidget()
 
 void IndexWidget::showMp3Window()
 {
-    //doto: not working
+    // 处理跳转到音乐窗口的逻辑
     if (dashboard) {
         qDebug() << dashboard;
         dashboard->getStackedWidget()->setCurrentIndex(1);  // 使用getStackedWidget方法
@@ -68,4 +75,34 @@ void IndexWidget::initWebViews()
 
     carWebView = findChild<QQuickWidget*>("car_webview");
     setupWebView(carWebView, QStringLiteral("qrc:/su7.qml"));
+}
+
+void IndexWidget::sendSOS()
+{
+    QMessageBox sosMsgBox;
+    sosMsgBox.setWindowTitle("SOS");
+    sosMsgBox.setText("SOS signal sent!");
+    sosMsgBox.setIcon(QMessageBox::Warning);
+
+    // 设置QMessageBox的样式表，包括文字颜色
+    sosMsgBox.setStyleSheet("QLabel{color: red; font-size: 18px;}");
+
+    sosMsgBox.exec();
+    showSOSMessage();
+}
+void IndexWidget::showSOSMessage()
+{
+    QDialog *dialog = new QDialog(this);
+    dialog->setWindowTitle("SOS Message");
+    dialog->resize(300, 200);
+
+    QLabel *label = new QLabel("This is an SOS message!", dialog);
+    label->setStyleSheet("color: red; font-size: 18px;");
+    label->setAlignment(Qt::AlignCenter);
+
+    QVBoxLayout *layout = new QVBoxLayout(dialog);
+    layout->addWidget(label);
+
+    dialog->setLayout(layout);
+    dialog->exec();
 }

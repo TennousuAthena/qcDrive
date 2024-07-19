@@ -4,7 +4,6 @@
         <file alias="dashboard-browser.svg">assets/dashboard-browser.svg</file>
         <file alias="dashboard-maps.svg">assets/dashboard-maps.svg</file>
         <file alias="dashboard-video.svg">assets/dashboard-video.svg</file>
-
         <file alias="page_index.png">assets/page_index.png</file>
         <file alias="weather.png">assets/weather_preview.png</file>
         <file>navigator.qml</file>
@@ -18,6 +17,7 @@
         <file>assets/lock.png</file>
         <file>assets/seatAdjustment.png</file>
         <file>assets/skylight.png</file>
+        <file>assets/sos.jpg</file>
     </qresource>
     <qresource prefix="/icons">
         <file alias="clear_day.png">assets/icons/clear_day.png</file>
@@ -38,7 +38,6 @@
         <file alias="sunset.png">assets/icons/sunset.png</file>
         <file alias="wind.png">assets/icons/wind.png</file>
     </qresource>
-
     <qresource prefix="/webview">
         <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>
         <file alias="su7.html">assets/webview/su7_imitate/dist/index.html</file>
@@ -52,7 +51,6 @@
     </qresource>
     <qresource prefix="/assets">
         <file alias="avatar.png">assets/guan.png</file>
-
         <file alias="index-DTSsIWWi.js">assets/webview/su7_imitate/dist/assets/index-DTSsIWWi.js</file>
         <file alias="index-DIuzovXx.css">assets/webview/su7_imitate/dist/assets/index-DIuzovXx.css</file>
         <file alias="bodyPlan-D1uVCiKu.glb">assets/webview/su7_imitate/dist/assets/bodyPlan-D1uVCiKu.glb</file>
