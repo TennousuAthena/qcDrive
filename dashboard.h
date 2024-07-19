@@ -27,7 +27,7 @@ private slots:
     void showBrowser();
     void showMaps();
     void showMedia();
-    void showCenter();
+    void showControl();
 
 private:
     Ui::Dashboard *ui;

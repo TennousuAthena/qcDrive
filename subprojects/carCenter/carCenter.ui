@@ -6,19 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>960</width>
+    <height>630</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>732</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="font">
    <font>
     <pointsize>15</pointsize>
-    <weight>75</weight>
     <bold>true</bold>
    </font>
   </property>
   <property name="windowTitle">
    <string>carCenter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/assets/t_floor_roughness-B2nbKZpC.webp);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -30,6 +38,13 @@
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>当前车门状态:</string>
             </property>
@@ -37,6 +52,13 @@
           </item>
           <item>
            <widget class="QLabel" name="label_door">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -48,6 +70,13 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>当前车灯状态:</string>
             </property>
@@ -55,6 +84,13 @@
           </item>
           <item>
            <widget class="QLabel" name="label_light">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -66,6 +102,13 @@
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>当前车锁状态:</string>
             </property>
@@ -73,6 +116,13 @@
           </item>
           <item>
            <widget class="QLabel" name="label_lock">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -88,6 +138,13 @@
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>当前空调状态:</string>
             </property>
@@ -95,6 +152,13 @@
           </item>
           <item>
            <widget class="QLabel" name="label_airCondition">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -106,13 +170,27 @@
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <item>
            <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>当前天窗状态:</string>
+             <string>当前窗户状态:</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_skylight">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>
@@ -124,6 +202,13 @@
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <item>
            <widget class="QLabel" name="label_6">
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>当前座椅调节状态:</string>
             </property>
@@ -131,6 +216,19 @@
           </item>
           <item>
            <widget class="QLabel" name="label_seatAdjustment">
+            <property name="baseSize">
+             <size>
+              <width>960</width>
+              <height>600</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Academy Engraved LET</family>
+              <pointsize>13</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="text">
              <string>TextLabel</string>
             </property>

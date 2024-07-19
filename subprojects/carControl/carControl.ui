@@ -47,13 +47,24 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    border: none;
-    background: transparent;
-    image: url(:/icon/door.png);
+	border: none; 
+	background: transparent;
+	
+	image: url(:/icon/door.png);
 }</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets.qrc">
+            <normaloff>:/assets/door.png</normaloff>:/assets/door.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>160</width>
+            <height>160</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -67,13 +78,24 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    border: none;
-    background: transparent;
-    image: url(:/icon/light.png);
+	border: none; 
+	background: transparent;
+	
+	image: url(:/icon/light.png);
 }</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets.qrc">
+            <normaloff>:/assets/light.png</normaloff>:/assets/light.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>160</width>
+            <height>160</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -87,13 +109,24 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    border: none;
-    background: transparent;
-    image: url(:/icon/lock.png);
+	border: none; 
+	background: transparent;
+	
+	image: url(:/icon/lock.png);
 }</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets.qrc">
+            <normaloff>:/assets/lock.png</normaloff>:/assets/lock.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>160</width>
+            <height>160</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -113,6 +146,9 @@
         <property name="text">
          <string/>
         </property>
+        <property name="pixmap">
+         <pixmap resource="../../assets.qrc">:/assets/center.png</pixmap>
+        </property>
        </widget>
       </item>
       <item>
@@ -127,13 +163,23 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    border: none;
-    background: transparent;
-    image: url(:/icon/aircondition.png);
+	border: none; 
+	background: transparent;
+	image: url(:/icon/aircondition.png);
 }</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets.qrc">
+            <normaloff>:/assets/aircondition.png</normaloff>:/assets/aircondition.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>160</width>
+            <height>160</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -147,13 +193,23 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    border: none;
-    background: transparent;
-    image: url(:/icon/skylight.png);
+	border: none; 
+	background: transparent;
+	image: url(:/icon/skylight.png);
 }</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets.qrc">
+            <normaloff>:/assets/skylight.png</normaloff>:/assets/skylight.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>160</width>
+            <height>160</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -167,13 +223,23 @@
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    border: none;
-    background: transparent;
-    image: url(:/icon/seatAdjustment.png);
+	border: none; 
+	background: transparent;
+	image: url(:/icon/seatAdjustment.png);
 }</string>
           </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../../assets.qrc">
+            <normaloff>:/assets/seatAdjustment.png</normaloff>:/assets/seatAdjustment.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>160</width>
+            <height>160</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -184,6 +250,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../assets.qrc"/>
+ </resources>
  <connections/>
 </ui>

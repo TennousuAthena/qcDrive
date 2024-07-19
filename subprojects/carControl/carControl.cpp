@@ -8,7 +8,18 @@ carControl::carControl(QWidget *parent)
     ui->setupUi(this);
     initSocket();
     initButton();
+
+
+
+// 打印样式表调试信息
+qDebug() << "Button Door style:" << ui->pushButton_Door->styleSheet();
+qDebug() << "Button Light style:" << ui->pushButton_Light->styleSheet();
+qDebug() << "Label Center style:" << ui->label->styleSheet();
 }
+
+
+
+
 
 carControl::~carControl()
 {
