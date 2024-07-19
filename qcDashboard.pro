@@ -20,7 +20,6 @@ SOURCES += \
     subprojects/myQWebEngine/webview.cpp \
     subprojects/mp3/mp3.cpp \
     subprojects/qtMedia/media.cpp \
-    subprojects/mp3/mp3.cpp\
     subprojects/carControl/carControl.cpp\
     subprojects/carCenter/carCenter.cpp\
 
@@ -33,7 +32,6 @@ HEADERS += \
     subprojects/myQWebEngine/webview.h \
     subprojects/mp3/mp3.h \
     subprojects/qtMedia/media.h \
-    subprojects/mp3/mp3.h\
     subprojects/carControl/carControl.h\
     subprojects/carCenter/carCenter.h\
 
