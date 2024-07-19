@@ -4,6 +4,8 @@
         <file alias="dashboard-browser.svg">assets/dashboard-browser.svg</file>
         <file alias="dashboard-maps.svg">assets/dashboard-maps.svg</file>
         <file alias="dashboard-video.svg">assets/dashboard-video.svg</file>
+        <file alias="dashboard-music.svg">assets/dashboard-music.svg</file>
+        <file alias="dashboard-settings.svg">assets/dashboard-settings.svg</file>
         <file alias="page_index.png">assets/page_index.png</file>
         <file alias="weather.png">assets/weather_preview.png</file>
         <file>navigator.qml</file>
@@ -37,6 +39,11 @@
         <file alias="sunrise.png">assets/icons/sunrise.png</file>
         <file alias="sunset.png">assets/icons/sunset.png</file>
         <file alias="wind.png">assets/icons/wind.png</file>
+
+        <file alias="play.svg">assets/play.svg</file>
+        <file alias="pause.svg">assets/pause.svg</file>
+        <file alias="volume.svg">assets/volume.svg</file>
+
     </qresource>
     <qresource prefix="/webview">
         <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>

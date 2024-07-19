@@ -20,21 +20,15 @@ Mp3Window::Mp3Window(QWidget *parent)
 
     // 设置样式表
     QString styleSheet =
-        "QMainWindow { background-color: #d3d3d3; }"
-        "QPushButton { background-color: transparent; border: none; }"
-        "QPushButton#prevButton, QPushButton#playPauseButton, QPushButton#nextButton, QPushButton#volumeButton, QPushButton#fileButton {"
-        "   border: none;"
-        "   padding: 10px;"
-        "}"
         "QSlider::groove:horizontal { height: 6px; background: #bbb; }"
         "QSlider::handle:horizontal { background: white; border: 1px solid #0059b3; width: 18px; margin: -5px 0; border-radius: 9px; }"
-        "QListWidget { background-color: #d3d3d3; color: black; border: 1px solid #aaa; }"
+        "QListWidget { background-color: #151515; color: white; border: 1px solid #aaa; }"
         "QListWidget::item { padding: 5px; }"
         "QListWidget::item:selected { background-color: #aaa; }"
-        "QMenuBar { background-color: #d3d3d3; color: black; }"
-        "QMenuBar::item { background-color: #d3d3d3; color: black; }"
+        "QMenuBar { background-color: #151515; color: white; }"
+        "QMenuBar::item { background-color: #151515; color: white; }"
         "QMenuBar::item:selected { background-color: #aaa; }"
-        "QStatusBar { background-color: #d3d3d3; color: black; }";
+        "QStatusBar { background-color: #151515; color: white; }";
 
     this->setStyleSheet(styleSheet);
 
@@ -235,7 +229,7 @@ void Mp3Window::updateImageLabelText(const QString &filePath)
     font.setItalic(true); // 设置斜体
     font.setBold(true); // 设置加粗
     ui->imageLabel->setFont(font);
-    ui->imageLabel->setStyleSheet("QLabel { color: black; }"); // 设置文本颜色
+    ui->imageLabel->setStyleSheet("QLabel { color: white; }"); // 设置文本颜色
 }
 
 void Mp3Window::updateCoverImage(const QString &filePath)
@@ -318,7 +312,7 @@ void Mp3Window::updateLyrics(qint64 position)
         font.setPointSize(18); // 设置字体大小
         font.setItalic(true); // 设置斜体
         ui->coverLabel->setFont(font);
-        ui->coverLabel->setStyleSheet("QLabel { color: black; }"); // 设置文本颜色
+        ui->coverLabel->setStyleSheet("QLabel { color: white; }"); // 设置文本颜色
     } else {
         ui->coverLabel->clear();
     }

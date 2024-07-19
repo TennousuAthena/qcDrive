@@ -57,7 +57,8 @@ FORMS += \
     weatherpage.ui
 
 RESOURCES += \
-    assets.qrc
+    assets.qrc \
+    subprojects/mp3/pic.qrc
 
 
 DISTFILES +=

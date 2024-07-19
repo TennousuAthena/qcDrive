@@ -11,7 +11,8 @@ Dashboard::Dashboard(QWidget *parent)
     connect(ui->btn2, &QPushButton::clicked, this, &Dashboard::showMaps);
     connect(ui->btn3, &QPushButton::clicked, this, &Dashboard::showBrowser);
     connect(ui->btn4, &QPushButton::clicked, this, &Dashboard::showMedia);
-    connect(ui->btn5, &QPushButton::clicked, this, &Dashboard::showControl);
+    connect(ui->btn5, &QPushButton::clicked, this, &Dashboard::showMp3Window);
+    connect(ui->btn6, &QPushButton::clicked, this, &Dashboard::showControl);
     connect(ui->btn_search, &QPushButton::clicked, this, &Dashboard::showMaps);
 
     connect(ui->btn_miniweather, &QPushButton::clicked, this, &Dashboard::showWeather);
@@ -43,6 +44,8 @@ void Dashboard::showIndexWidget()
 void Dashboard::showMp3Window()
 {
     ui->stackedWidget->setCurrentIndex(1);
+    QPixmap pixmap(":/dashboard-music.svg");
+    ui->bg->setPixmap(pixmap);
 }
 
 void Dashboard::showBrowser()
@@ -68,6 +71,8 @@ void Dashboard::showMedia()
 void Dashboard::showControl()
 {
     ui->stackedWidget->setCurrentIndex(5);
+    QPixmap pixmap(":/dashboard-settings.svg");
+    ui->bg->setPixmap(pixmap);
 }
 
 void Dashboard::showWeather()

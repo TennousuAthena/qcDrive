@@ -47,7 +47,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="assets.qrc">:/dashboard-main.svg</pixmap>
+    <pixmap>:/dashboard-main.svg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -76,7 +76,7 @@
      <x>30</x>
      <y>200</y>
      <width>66</width>
-     <height>371</height>
+     <height>441</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="btn_group">
@@ -169,12 +169,38 @@
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="btn6">
+      <property name="minimumSize">
+       <size>
+        <width>64</width>
+        <height>64</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0); color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
    </layout>
    <zorder>btn5</zorder>
    <zorder>btn3</zorder>
    <zorder>btn4</zorder>
    <zorder>btn2</zorder>
    <zorder>btn1</zorder>
+   <zorder>btn6</zorder>
   </widget>
   <widget class="QLabel" name="bgc">
    <property name="geometry">
@@ -195,8 +221,8 @@
   <widget class="miniWeather" name="mini_weather" native="true">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>20</y>
+     <x>780</x>
+     <y>25</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -231,7 +257,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="assets.qrc">:/assets/avatar.png</pixmap>
+    <pixmap>:/assets/avatar.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -240,8 +266,8 @@
   <widget class="QPushButton" name="btn_miniweather">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>20</y>
+     <x>780</x>
+     <y>25</y>
      <width>371</width>
      <height>51</height>
     </rect>
@@ -318,8 +344,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="assets.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
