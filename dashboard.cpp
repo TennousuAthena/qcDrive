@@ -10,6 +10,7 @@ Dashboard::Dashboard(QWidget *parent)
     connect(ui->btn1, &QPushButton::clicked, this, &Dashboard::showIndexWidget);
     connect(ui->btn2, &QPushButton::clicked, this, &Dashboard::showMaps);
     connect(ui->btn3, &QPushButton::clicked, this, &Dashboard::showBrowser);
+    connect(ui->btn_search, &QPushButton::clicked, this, &Dashboard::showMaps);
 }
 
 Dashboard::~Dashboard()
