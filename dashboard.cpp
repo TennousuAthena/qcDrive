@@ -20,6 +20,16 @@ Dashboard::~Dashboard()
     delete ui;
 }
 
+QStackedWidget* Dashboard::getStackedWidget()
+{
+    return ui->stackedWidget; // 返回指向stackedWidget的指针
+}
+
+IndexWidget* Dashboard::getIndexWidget()
+{
+    return ui->stackedWidget->findChild<IndexWidget*>("index_widget"); // 返回指向IndexWidget的指针
+}
+
 void Dashboard::showIndexWidget()
 {
     ui->stackedWidget->setCurrentIndex(0);

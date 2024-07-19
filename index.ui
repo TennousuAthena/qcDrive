@@ -82,6 +82,36 @@
     <enum>QQuickWidget::SizeRootObjectToView</enum>
    </property>
   </widget>
+  <widget class="QPushButton" name="gotoMusic">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>430</y>
+     <width>521</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgba(255, 255, 255, 0);
+background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="emergency">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>10</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>wooow</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>

@@ -13,23 +13,58 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="preview">
+  <widget class="QLabel" name="weather_icon">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>91</width>
-     <height>51</height>
+     <width>49</width>
+     <height>48</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="assets.qrc">:/weather.png</pixmap>
+    <pixmap resource="assets.qrc">:/icons/clear_day.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tempature">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>3</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(236, 240, 240); font-size: &quot;28pt&quot;; font-weight: 600;</string>
+   </property>
+   <property name="text">
+    <string>24°</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weather">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>25</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(206, 200, 200); font-size: &quot;22pt&quot;; font-weight: 400;</string>
+   </property>
+   <property name="text">
+    <string>Sunny</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

@@ -10,6 +10,26 @@
         <file>navigator.qml</file>
         <file>su7.qml</file>
     </qresource>
+    <qresource prefix="/icons">
+        <file alias="clear_day.png">assets/icons/clear_day.png</file>
+        <file alias="clear_night.png">assets/icons/clear_night.png</file>
+        <file alias="cloudy_day.png">assets/icons/cloudy_day.png</file>
+        <file alias="cloudy_night.png">assets/icons/cloudy_night.png</file>
+        <file alias="clouudy.png">assets/icons/cloudy.png</file>
+        <file alias="fog.png">assets/icons/fog.png</file>
+        <file alias="heavy_rain.png">assets/icons/heavy_rain.png</file>
+        <file alias="heavy_snow.png">assets/icons/heavy_snow.png</file>
+        <file alias="rain.png">assets/icons/rain.png</file>
+        <file alias="rain_night.png">assets/icons/rain_night.png</file>
+        <file alias="small_rain.png">assets/icons/small_rain.png</file>
+        <file alias="smog.png">assets/icons/smog.png</file>
+        <file alias="snow.png">assets/icons/snow.png</file>
+        <file alias="storm.png">assets/icons/storm.png</file>
+        <file alias="sunrise.png">assets/icons/sunrise.png</file>
+        <file alias="sunset.png">assets/icons/sunset.png</file>
+        <file alias="wind.png">assets/icons/wind.png</file>
+    </qresource>
+
     <qresource prefix="/webview">
         <file alias="amap2.5.html">assets/webview/main_amap2.5d.html</file>
         <file alias="su7.html">assets/webview/su7_imitate/dist/index.html</file>
