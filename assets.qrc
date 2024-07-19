@@ -1,6 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file alias="dashboard.png">assets/dashboard.png</file>
+        <file alias="dashboard-main.svg">assets/dashboard-main.svg</file>
+        <file alias="dashboard-browser.svg">assets/dashboard-browser.svg</file>
+        <file alias="dashboard-maps.svg">assets/dashboard-maps.svg</file>
+        <file alias="dashboard-video.svg">assets/dashboard-video.svg</file>
+
         <file alias="page_index.png">assets/page_index.png</file>
         <file alias="weather.png">assets/weather_preview.png</file>
         <file>navigator.qml</file>
@@ -12,6 +16,8 @@
         <file alias="AMap.html">subprojects/MapB/AMap.html</file>
     </qresource>
     <qresource prefix="/assets">
+        <file alias="avatar.png">assets/guan.png</file>
+
         <file alias="index-DTSsIWWi.js">assets/webview/su7_imitate/dist/assets/index-DTSsIWWi.js</file>
         <file alias="index-DIuzovXx.css">assets/webview/su7_imitate/dist/assets/index-DIuzovXx.css</file>
         <file alias="bodyPlan-D1uVCiKu.glb">assets/webview/su7_imitate/dist/assets/bodyPlan-D1uVCiKu.glb</file>

@@ -47,7 +47,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="assets.qrc">:/dashboard.png</pixmap>
+    <pixmap resource="assets.qrc">:/dashboard-main.svg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -185,8 +185,8 @@
   <widget class="miniWeather" name="mini_weather" native="true">
    <property name="geometry">
     <rect>
-     <x>819</x>
-     <y>30</y>
+     <x>820</x>
+     <y>20</y>
      <width>121</width>
      <height>51</height>
     </rect>
@@ -208,12 +208,32 @@
     <string>PushButton</string>
    </property>
   </widget>
+  <widget class="QLabel" name="guan">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>20</y>
+     <width>48</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="assets.qrc">:/assets/avatar.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>bgc</zorder>
   <zorder>bg</zorder>
   <zorder>verticalLayoutWidget</zorder>
   <zorder>stackedWidget</zorder>
   <zorder>mini_weather</zorder>
   <zorder>btn_search</zorder>
+  <zorder>guan</zorder>
  </widget>
  <customwidgets>
   <customwidget>
@@ -263,12 +283,7 @@
    <extends>QWidget</extends>
    <header>subprojects/carCenter/carCenter.h</header>
    <container>1</container>
-  </customwidget>  <customwidget>
-  <class>carControl</class>
-  <extends>QWidget</extends>
-  <header>subprojects/carControl/carControl.h</header>
-  <container>1</container>
- </customwidget>
+  </customwidget>
  </customwidgets>
  <resources>
   <include location="assets.qrc"/>

@@ -7,143 +7,223 @@
     <x>0</x>
     <y>0</y>
     <width>960</width>
-    <height>630</height>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Video Player</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QVideoWidget" name="videoWidget" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1080</width>
-     <height>720</height>
+     <width>960</width>
+     <height>550</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>50</number>
-    </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>550</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>550</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>576</y>
+     <width>951</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="playButton">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>:icons/play.svg</normaloff>:icons/play.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pauseButton">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>:icons/pause.svg</normaloff>:icons/pause.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSlider" name="positionSlider">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="volumeButton">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>:icons/volume.svg</normaloff>:icons/volume.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSlider" name="volumeSlider">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>180</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <widget class="QVideoWidget" name="videoWidget" native="true">
+     <widget class="QPushButton" name="playButton">
       <property name="minimumSize">
        <size>
-        <width>960</width>
-        <height>600</height>
+        <width>0</width>
+        <height>0</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>960</width>
-        <height>600</height>
+        <width>16777215</width>
+        <height>30</height>
        </size>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:icons/play.svg</normaloff>:icons/play.svg</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pauseButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:icons/pause.svg</normaloff>:icons/pause.svg</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="positionSlider">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #262626;  /* 槽的边框颜色 */
+    height: 4px;  /* 槽的高度 */
+    background: #262626;  /* 槽的背景颜色 */
+    margin: 1px 0;  /* 上下边距 */
+    border-radius: 2px;  /* 槽的圆角半径 */
+}
+
+QSlider::handle:horizontal {
+    background: rgb(104, 104, 104);  /* 滑块的背景颜色 */
+    border: 1px solid #cff80b;  /* 滑块的边框颜色 */
+    width: 16px;  /* 滑块的宽度 */
+    height: 16px;  /* 滑块的高度 */
+    margin: -6px 0;  /* 使滑块与槽的高度居中对齐 */
+    border-radius: 8px;  /* 滑块的圆角半径 */
+}
+
+QSlider::sub-page:horizontal {
+    background: #cff80b;  /* 已经过的部分的颜色 */
+    border: 1px solid #4d4d4d;  /* 已经过部分的边框颜色 */
+    height: 4px;  /* 已经过部分的高度 */
+    border-radius: 2px;  /* 已经过部分的圆角半径 */
+}
+
+QSlider::add-page:horizontal {
+    background: #262626;  /* 未经过部分的颜色 */
+    border: 1px solid #4d4d4d;  /* 未经过部分的边框颜色 */
+    height: 4px;  /* 未经过部分的高度 */
+    border-radius: 2px;  /* 未经过部分的圆角半径 */
+}
+
+QSlider::handle:horizontal:hover {
+    background: #e1ff4a;  /* 滑块悬停时的背景颜色 */
+    border: 1px solid #5d5d5d;  /* 滑块悬停时的边框颜色 */
+}
+
+QSlider::handle:horizontal:pressed {
+    background: #c1df3a;  /* 滑块按下时的背景颜色 */
+    border: 1px solid #3d3d3d;  /* 滑块按下时的边框颜色 */
+}</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="volumeButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:icons/volume.svg</normaloff>:icons/volume.svg</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="volumeSlider">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>180</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #262626;  /* 槽的边框颜色 */
+    height: 4px;  /* 槽的高度 */
+    background: #262626;  /* 槽的背景颜色 */
+    margin: 1px 0;  /* 上下边距 */
+    border-radius: 2px;  /* 槽的圆角半径 */
+}
+
+QSlider::handle:horizontal {
+    background: rgb(104, 104, 104);  /* 滑块的背景颜色 */
+    border: 1px solid #cff80b;  /* 滑块的边框颜色 */
+    width: 16px;  /* 滑块的宽度 */
+    height: 16px;  /* 滑块的高度 */
+    margin: -6px 0;  /* 使滑块与槽的高度居中对齐 */
+    border-radius: 8px;  /* 滑块的圆角半径 */
+}
+
+QSlider::sub-page:horizontal {
+    background: #cff80b;  /* 已经过的部分的颜色 */
+    border: 1px solid #4d4d4d;  /* 已经过部分的边框颜色 */
+    height: 4px;  /* 已经过部分的高度 */
+    border-radius: 2px;  /* 已经过部分的圆角半径 */
+}
+
+QSlider::add-page:horizontal {
+    background: #262626;  /* 未经过部分的颜色 */
+    border: 1px solid #4d4d4d;  /* 未经过部分的边框颜色 */
+    height: 4px;  /* 未经过部分的高度 */
+    border-radius: 2px;  /* 未经过部分的圆角半径 */
+}
+
+QSlider::handle:horizontal:hover {
+    background: #e1ff4a;  /* 滑块悬停时的背景颜色 */
+    border: 1px solid #5d5d5d;  /* 滑块悬停时的边框颜色 */
+}
+
+QSlider::handle:horizontal:pressed {
+    background: #c1df3a;  /* 滑块按下时的背景颜色 */
+    border: 1px solid #3d3d3d;  /* 滑块按下时的边框颜色 */
+}</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>

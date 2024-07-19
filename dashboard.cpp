@@ -23,6 +23,8 @@ Dashboard::~Dashboard()
 void Dashboard::showIndexWidget()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    QPixmap pixmap(":/dashboard-main.svg");
+    ui->bg->setPixmap(pixmap);
 }
 
 void Dashboard::showMp3Window()
@@ -33,16 +35,22 @@ void Dashboard::showMp3Window()
 void Dashboard::showBrowser()
 {
     ui->stackedWidget->setCurrentIndex(2);
+    QPixmap pixmap(":/dashboard-browser.svg");
+    ui->bg->setPixmap(pixmap);
 }
 
 void Dashboard::showMaps()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    QPixmap pixmap(":/dashboard-maps.svg");
+    ui->bg->setPixmap(pixmap);
 }
 
 void Dashboard::showMedia()
 {
     ui->stackedWidget->setCurrentIndex(4);
+    QPixmap pixmap(":/dashboard-video.svg");
+    ui->bg->setPixmap(pixmap);
 }
 void Dashboard::showCenter()
 {
