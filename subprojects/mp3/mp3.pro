@@ -4,13 +4,12 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
-
+    mp3.cpp
 HEADERS += \
-    mainwindow.h
+   mp3.h
 
 FORMS += \
-    mainwindow.ui
+    mp3.ui
 
 RESOURCES += \
     pic.qrc

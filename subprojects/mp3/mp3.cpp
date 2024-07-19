@@ -22,7 +22,7 @@ Mp3Window::Mp3Window(QWidget *parent)
     QString styleSheet =
         "QMainWindow { background-color: #001f3f; }"
         "QPushButton { background-color: transparent; border: none; }"
-        "QPushButton#prevButton, QPushButton#playPauseButton, QPushButton#nextButton, QPushButton#volumeButton {"
+        "QPushButton#prevButton, QPushButton#playPauseButton, QPushButton#nextButton, QPushButton#volumeButton, QPushButton#fileButton {"
         "   border: none;"
         "   padding: 10px;"
         "}"
@@ -47,10 +47,13 @@ Mp3Window::Mp3Window(QWidget *parent)
     ui->nextButton->setIconSize(QSize(48, 48));
     ui->volumeButton->setIcon(QIcon(":/new/prefix1/volume.png"));
     ui->volumeButton->setIconSize(QSize(48, 48));
+    ui->fileButton->setIcon(QIcon(":/new/prefix1/file.png"));
+    ui->fileButton->setIconSize(QSize(48, 48));
 
     player->setAudioOutput(audioOutput);
     audioOutput->setVolume(0.5); // 设置初始音量为 50%
 
+    connect(ui->fileButton, &QPushButton::clicked, this, &Mp3Window::openFiles); // 添加文件按钮的连接
     connect(ui->playPauseButton, &QPushButton::clicked, this, &Mp3Window::togglePlayPause);
     connect(ui->nextButton, &QPushButton::clicked, this, &Mp3Window::next);
     connect(ui->prevButton, &QPushButton::clicked, this, &Mp3Window::previous);
